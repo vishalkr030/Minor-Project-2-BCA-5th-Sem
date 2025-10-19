@@ -8,7 +8,7 @@
 
 > It has 6 modules Admin, User, Reservation, Bus, Route and Feedback.
 
-> Book my bus (Bus ticket reservation system) application during the construct week at [Masai School](https://masaischool.com/). Completed the project in five days with a team of five aspiring developers.
+> Book my bus (Bus ticket reservation system)
 
 # Features
 
@@ -112,21 +112,11 @@
 
 # Contributor
 
-#### Deependra yadav
-> Github: [DeependrYadav](https://github.com/DeependrYadav) 
-(Teamlead)
+#### Vishal Kumar Singh
+> Github: #### Shivam kumar Jha
+> Github: [vishalkr030](https://github.com/vishalkr030)
+Worked on Frontend
+
+#### Sonu Kumar Das
+> Github: [Sonu Kumar Das]
 Worked on Backend
-
-#### Shivam kumar Jha
-> Github: [Shivam6209](https://github.com/Shivam6209)
-Worked on Login and SignUp page
-
-
-#### Ramanjeet Singh
-> Github: [gzbsingh](https://github.com/gzbsingh)
-Worked on Admin panel
-
-
-#### N MOHAMMED NAWAZ
-> Github: [nmohammednawaz](https://github.com/nmohammednawaz)
-Worked on User side
