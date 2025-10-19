@@ -113,7 +113,6 @@
 # Contributor
 
 #### Vishal Kumar Singh
-> Github: #### Shivam kumar Jha
 > Github: [vishalkr030](https://github.com/vishalkr030)
 Worked on Frontend
 
