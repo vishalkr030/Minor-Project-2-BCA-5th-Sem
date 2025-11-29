@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up - BUS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style> body { padding-top: 70px; } .error { color:#b00; } </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">MySite</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mr-2"><a class="btn btn-outline-warning" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="btn btn-outline-success" href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-7 col-lg-6">
+      <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title mb-3">Create Account</h4>
+
+            <form id="signupForm" novalidate>
+              <div class="form-group">
+                <label for="fullName">Full name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Your name" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="signupEmail">Email address</label>
+                <input type="email" class="form-control" id="signupEmail" placeholder="you@example.com" required>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="signupPassword">Password</label>
+                  <input type="password" class="form-control" id="signupPassword" placeholder="Password" minlength="6" required>
+                  <div class="invalid-feedback">Min 6 characters.</div>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="signupConfirm">Confirm Password</label>
+                  <input type="password" class="form-control" id="signupConfirm" placeholder="Confirm" required>
+                  <div class="invalid-feedback">Passwords must match.</div>
+                </div>
+              </div>
+
+              <div id="signupError" class="error mb-2" style="display:none;"></div>
+
+              <button type="submit" class="btn btn-success btn-block">Create account</button>
+            </form>
+
+            <small class="d-block mt-3">Already have an account? <a href="login.html">Login here</a>.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const signupForm = document.getElementById('signupForm');
+    const signupError = document.getElementById('signupError');
+
+    signupForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      signupError.style.display = 'none';
+
+      const name = document.getElementById('fullName');
+      const email = document.getElementById('signupEmail');
+      const pwd = document.getElementById('signupPassword');
+      const confirm = document.getElementById('signupConfirm');
+
+      // basic validation
+      if (!name.checkValidity()) { name.classList.add('is-invalid'); return; } else name.classList.remove('is-invalid');
+      if (!email.checkValidity()) { email.classList.add('is-invalid'); return; } else email.classList.remove('is-invalid');
+      if (!pwd.checkValidity()) { pwd.classList.add('is-invalid'); return; } else pwd.classList.remove('is-invalid');
+
+      if (pwd.value !== confirm.value) {
+        confirm.classList.add('is-invalid');
+        signupError.textContent = 'Passwords do not match.';
+        signupError.style.display = 'block';
+        return;
+      } else {
+        confirm.classList.remove('is-invalid');
+      }
+
+      // FAKE account creation: replace with an API call to your backend
+      // For demo we'll accept any sign up, show success and redirect to login
+      alert('Account created successfully! You will be redirected to Login.');
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>
